@@ -71,6 +71,7 @@ function handleCommand(command) {
         <p>For I sincerely believe that that is where the next tech revolution is</p>
         <p>And since I love Mathematics and Science, I am more than willing to</p>
         <p>go forth with Qubits and Photonic signals</p>
+        <p>I am aiming for you Google, and IBM</p>
       </div>
     `;
   }
