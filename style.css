@@ -1,0 +1,85 @@
+/* style.css */
+body {
+  background: black;
+  
+  color: limegreen;
+  font-family: monospace;
+  /*margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+#navbar
+{
+  border: 2px black solid;
+  background-color: black;
+  color: limegreen;
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+
+#navbar > h1
+{
+  margin-left: 5px;
+}
+
+#terminal-container
+{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#terminal {
+  
+  width: 80%;
+  height: 80%;
+  background: black;
+  padding: 10px;
+  overflow-y: auto;
+  border: 2px solid limegreen;
+}
+
+#input-line {
+  display: flex;
+}
+
+.prompt {
+  margin-right: 5px;
+}
+
+#commandInput {
+  background: black;
+  color: limegreen;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: monospace;
+}
+
+.logo
+{
+  height: 100px;
+  width: 150px;
+  margin-top: 0px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+/*Debugging*/
+.imageTest
+{
+  width: 200px;
+  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
