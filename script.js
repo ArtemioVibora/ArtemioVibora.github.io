@@ -108,6 +108,8 @@ function handleCommand(command) {
                 <li>Project Management</li>
                 <li>Godot</li>
                 <li>SConstruct</li>
+                <li>MySQL</li>
+                <li>Basic Web Security</li>
             </ul>
         </div>
     `;
@@ -121,6 +123,7 @@ function handleCommand(command) {
         
         <li>About-the-portfolio</li>
         <li>about-me</li>
+        <li>achievements</li>
         <li>help</li>
         <li>skills</li>
         <li>link-to-git</li>
@@ -139,7 +142,6 @@ function handleCommand(command) {
         <p>Email: juan.amado.sicat.cleto@gmail.com</p>
         <p>Facebook link: <span><a href="https://www.facebook.com/ilokano.si.zeus/">Ilokano si Zues</a></span></p>
         <p>Discord name: adoviktorreznov</p>
-        <p>Phone number: 09173022091</p>
       </div>
     `;
   }
@@ -150,7 +152,23 @@ function handleCommand(command) {
 
   else if (command === 'achievements')
   {
-    response = `<div><p> Hello </p> </div>`;
+    response = `
+      <p>==========================</p>
+      <ul>
+        
+        <li>Winner of the Game Jam Plus Best Non Unity Game 2023</li>
+        <li>Dean's lister first term 2024-25 first honor</li>
+        <li>Dean's lister second term 2024-25 second honor</li>
+        <li>Winner of Capture the flag contest SOC week 2025 iacademy</li>
+        <li>Winner of ICT Quiz Bee "Brain Busters" SOC week 2025 iacademy</li>
+        <li>Participated in PENLAB game jam 2023</li>
+        <li>Most outstanding engagement project award 2019 certified UP NSTP</li>
+        <li>Web design certified by Freecode camp</li>
+        <li>Certificate of appreciation Vote Report 2025</li>
+      </ul>
+      <p>==========================</p>
+    
+    `;
   }
 
   else if (command === 'devfetch')
