@@ -171,9 +171,14 @@ function handleCommand(command) {
     `;
   }
 
+
+  // TO DO: Use jp2a for this to make a logo
   else if (command === 'devfetch')
   {
-
+    response =
+    `
+      <p>===============================================</p>
+    `;
   }
 
   else if (command === 'full-description')
