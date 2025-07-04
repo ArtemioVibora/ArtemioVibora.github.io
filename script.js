@@ -139,7 +139,7 @@ function handleCommand(command) {
   {
     response = `
       <div>
-        <p>Email: juan.amado.sicat.cleto@gmail.com</p>
+        <p>Email: ilokanozeus12@gmail.com</p>
         <p>Facebook link: <span><a href="https://www.facebook.com/ilokano.si.zeus/">Ilokano si Zues</a></span></p>
         <p>Discord name: adoviktorreznov</p>
       </div>
