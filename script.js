@@ -267,12 +267,12 @@ const bootSteps = [
 ];
 
 window.addEventListener("load", () => {
-  // Step 1: Loader finishes
+  
   setTimeout(() => {
     loader.style.display = "none";
     bootlog.style.display = "block";
 
-    // Step 2: Start bootlog
+    
     runBootSequence();
   }, 500); // Delay after loader
 });
@@ -288,9 +288,9 @@ function runBootSequence() {
       bootlog.appendChild(line);
       bootlog.scrollTop = bootlog.scrollHeight;
       i++;
-      setTimeout(nextLine, 400 + Math.random() * 200); // Jittery terminal feel
+      setTimeout(nextLine, 400 + Math.random() * 200); 
     } else {
-      // Step 3: Show content
+      
       setTimeout(() => {
         bootlog.style.display = "none";
         content.style.display = "block";
