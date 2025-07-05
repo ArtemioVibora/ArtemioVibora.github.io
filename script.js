@@ -110,6 +110,7 @@ function handleCommand(command) {
                 <li>SConstruct</li>
                 <li>MySQL</li>
                 <li>Basic Web Security</li>
+                <li>Linux</li>
             </ul>
         </div>
     `;
@@ -129,12 +130,28 @@ function handleCommand(command) {
         <li>link-to-git</li>
         <li>link-to-itch</li>
         <li>contact-info</li>
+        <li>sample_projects</li>
         <li>clear</li>
         
       </ul>
       <p>==========================</p>
     `;
   }
+
+  else if (command === 'sample_projects')
+  {
+    response = `
+      <div>
+        <p>++++++++++++++++++++++++++++++++++++++++</p>
+        <ul>
+          <li><a href="youtube.com">Still fixing this hehe</a></li>
+        </ul>
+        </p>+++++++++++++++++++++++++++++++++++++++</p>
+      </div>
+    `;
+  }
+
+
   else if (command === 'contact-info')
   {
     response = `
@@ -142,6 +159,9 @@ function handleCommand(command) {
         <p>Email: ilokanozeus12@gmail.com</p>
         <p>Facebook link: <span><a href="https://www.facebook.com/ilokano.si.zeus/">Ilokano si Zues</a></span></p>
         <p>Discord name: adoviktorreznov</p>
+        <div>
+          <img class="logo" src="Images/bg1.jpg">
+        </div>
       </div>
     `;
   }
@@ -165,6 +185,8 @@ function handleCommand(command) {
         <li>Most outstanding engagement project award 2019 certified UP NSTP</li>
         <li>Web design certified by Freecode camp</li>
         <li>Certificate of appreciation Vote Report 2025</li>
+        <li>Web Security SOC Week 2025 certificate</li>
+        <li>Blockchain SOC Week 2025 certificate</li>
       </ul>
       <p>==========================</p>
     
@@ -195,3 +217,16 @@ function handleCommand(command) {
   outputDiv.innerHTML += `<div>&gt; ${safeCommand}</div>${response}`;
   outputDiv.scrollTop = outputDiv.scrollHeight;
 }
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  loader.style.opacity = 0;
+  
+
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.style.display = "block";
+  }, 3000);
+});

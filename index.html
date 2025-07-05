@@ -6,23 +6,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav id="navbar">
-  <h1>Amado's Developer Portfolio turned Terminal</h1>
-  <h1>--Type 'help' for commands--</h1>
-</nav>
-<div id="terminal-container">
-  <div id="terminal">
-    <div id="output"></div>
+  <!--LOADER-->
+  <div id="loader" class="glitch-wrapper">
+    <div class="glitch-text" data-text="BOOTING SYSTEM...">BOOTING SYSTEM...</div>
+  </div>
+
+<!--CONTENT-->
+<div id="content">
+  <nav id="navbar">
+    <div class="glitching_letters">
+      <h1>Amado's Developer Portfolio turned Terminal--Type 'help' for commands--</h1>
+    </div>
+  </nav>
+  <div id="terminal-container">
+    <div id="terminal">
+      <div id="output"></div>
     
-    <div id="input-line">
-      <span class="prompt">&gt;</span>
-      <input type="text" id="commandInput" autofocus />
+      <div id="input-line">
+        <span class="prompt">&gt;</span>
+        <input type="text" id="commandInput" autofocus />
       
+      </div>
     </div>
   </div>
-</div>
-<div>
-  <img class="logo" src="Images/bg1.jpg">
+  <div>
+    <img class="logo" src="Images/bg1.jpg">
+  </div>
 </div>
 
 <script src="script.js"></script>
