@@ -294,6 +294,7 @@ function runBootSequence() {
       setTimeout(() => {
         bootlog.style.display = "none";
         content.style.display = "block";
+        document.getElementById("terminal-container").style.display = "flex";
         document.getElementById("commandInput").focus();
       }, 1000);
     }
