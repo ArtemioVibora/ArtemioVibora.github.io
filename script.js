@@ -198,7 +198,46 @@ function handleCommand(command) {
   {
     response =
     `
-      <p>===============================================</p>
+    <pre>
+
+                  '..';;x               
+               .,,,,,l;;.               
+             .;,,,,,xOo                
+  ''..''...',,,,,,,kx;  
+   .,;,,,,,,,,,,,,kl.                 
+ ,'...;,,,,,,,,,;c.                     
+  ...',,,,,,,,,;c  ..                   
+ .';,,,,,,'.. .d.  ...     oOOk:        
+......       .k.    ...   ,WMMMMN'      
+            .;      ...'' OKxxMMMk      
+           .'        ''''l00;.0MMW.     
+           ..         xo,.,Oo.,WMM,     
+         .,' .        XMWO:lOk:cNMX.    
+        .:. ;xx:'..,;xMWXl;'OXc..kK; .' 
+       .'.   .oxxl:lX0KNKxxONXd::lc,.c  
+      ,,         ..;o:kOkddl'.,'..,'X   
+     lk           ,0XXOdloc;. l:. ;Nl   
+    ,:.          .0XXXXXXX0xc ,:l.XO.   
+   .,            ,KXKXKKOKKd.  o K0     
+                 dkXXX0OKKl. ..lkMXxol  
+                ,XXXOclXXKk.  'oMM:.''  
+               :XK0:.oXKKd.    0d.x;    
+              :KX0d:KKO.lO    ;W,       
+             :;'0Kk0K0c.dKl  kxW'       
+           .::;..oc00OOxxxd:.;ld.       
+          .xxxclc  ';.  .:.   l         
+         ;..'. l.  .      ....,.....    
+    .....      .'         .xd.    .c    
+  '  ..     ':l''         ,xl;'..';'    
+  ..kKOOdodOKKKk00OO.      ...O0:lx   
+===============================================
+User        : Amado
+Languages   : C++, Python, Java, Assembly
+Projects    : Bootloader, OS, Text Editor, Chatbot
+Tools       : Git, NASM, GCC, G++
+Github      : github.com/artemiovibora
+===============================================
+    </pre>
     `;
   }
 
@@ -240,14 +279,14 @@ const bootSteps = [
   { text: "[ OK ] Activating cringe filter", class: "boot-ok" },
   { text: "[ WARN ] Cringe filter overloaded", class: "boot-warn" },
   { text: "[ OK ] Compiling quantum thoughts and hilbert spaces", class: "boot-ok" },
-  { text: "[FAILED] Failed to mount /mnt/hope", class: "boot-fail" },
+  { text: "[FAILED] Failed to mount /mnt/fascism", class: "boot-fail" },
   { text: "[ OK ] Generating shitposty comebacks", class: "boot-ok" },
   { text: "[ OK ] Scanning for small brain", class: "boot-ok" },
   { text: "[ OK ] All small brain quarantined", class: "boot-ok" },
   { text: "[ OK ] Loading AI co-pilot: Me", class: "boot-ok" },
   { text: "[ OK ] Me online. Roast protocols enabled.", class: "boot-ok" },
   { text: "[ OK ] Disabling impostor syndrome", class: "boot-ok" },
-  { text: "[ OK ] Installing emotional firewall", class: "boot-ok" },
+  { text: "[ OK ] Installing anti-fascist firewall", class: "boot-ok" },
   { text: "[ OK ] Launching terminal within website beep bop beep bop", class: "boot-ok" },
   { text: "[ OK ] Simulating boot to boot in the boot", class: "boot-ok" },
   { text: "[ OK ] Injecting caffeine and cigarettes into RAM", class: "boot-ok" },
