@@ -11,6 +11,10 @@ body {
   justify-content: center;*/
 }
 
+a {
+  color: limegreen;
+}
+
 #navbar
 {
   border: 2px black solid;
@@ -225,19 +229,21 @@ body {
 }
 /*Terminal flicker
 /* Flicker effect on terminal container */
+
+/*
 #terminal-container {
   animation: flickerScreen 2s infinite;
   background-color: black;
   color: #00ff00;
-  font-family: 'Courier New', monospace;
+  font-family: monospace;
 }
 
-/*
+
 #output, .prompt, #commandInput {
   animation: flickerText 3s infinite;
 }
 */
-
+/*
 @keyframes flickerScreen {
   0%, 100% {
     opacity: 1;
@@ -301,3 +307,16 @@ body {
 DISTRACTING LMAO
 */
 
+#bootlog {
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+  background: black;
+  padding: 15px;
+  white-space: pre;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.boot-ok { color: #00ff00; }
+.boot-fail { color: #ff4444; }
+.boot-warn { color: #ffff00; }

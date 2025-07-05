@@ -142,11 +142,12 @@ function handleCommand(command) {
   {
     response = `
       <div>
-        <p>++++++++++++++++++++++++++++++++++++++++</p>
+        <p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
         <ul>
-          <li><a href="youtube.com">Still fixing this hehe</a></li>
+          <p><a href="https://github.com/ArtemioVibora/Comrade_Hope">Comrade Hope</a> is made as a face/emotion detection chatbot.</p>
+          <p><a href="https://github.com/ArtemioVibora/Miyasan">Miyasan</a> is made as a database/json parser.</p>
         </ul>
-        </p>+++++++++++++++++++++++++++++++++++++++</p>
+        </p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
       </div>
     `;
   }
@@ -216,6 +217,91 @@ function handleCommand(command) {
   outputDiv.scrollTop = outputDiv.scrollHeight;
 }
 
+//Bootloader
+const loader = document.getElementById("loader");
+const bootlog = document.getElementById("bootlog");
+const content = document.getElementById("content");
+
+const bootSteps = [
+  { text: "[ OK ] Mounted /boot", class: "boot-ok" },
+  { text: "[ OK ] Initialized Vault Terminal Kernel", class: "boot-ok" },
+  { text: "[ OK ] Connected to Developer Interface Daemon", class: "boot-ok" },
+  { text: "[ WARN ] No Mouse Detected — Switching to Terminal Mode", class: "boot-warn" },
+  { text: "[ OK ] Mounted /dev/sda1 to /boot", class: "boot-ok" },
+  { text: "[ OK ] Detected brothers operator", class: "boot-ok" },
+  { text: "[ OK ] Establishing neural link", class: "boot-ok" },
+  { text: "[ WARN ] Brainwave instability detected", class: "boot-warn" },
+  { text: "[ OK ] Mounting /home/brother", class: "boot-ok" },
+  { text: "[ OK ] Decrypting classified portfolio data", class: "boot-ok" },
+  { text: "[ OK ] Connected to localhost (69.4.2.0)", class: "boot-ok" },
+  { text: "[ OK ] Loading terminal environment", class: "boot-ok" },
+  { text: "[ OK ] Setting timezone: UTC+08:00", class: "boot-ok" },
+  { text: "[ OK ] Engaging sarcasm module", class: "boot-ok" },
+  { text: "[ OK ] Activating cringe filter", class: "boot-ok" },
+  { text: "[ WARN ] Cringe filter overloaded", class: "boot-warn" },
+  { text: "[ OK ] Compiling quantum thoughts and hilbert spaces", class: "boot-ok" },
+  { text: "[FAILED] Failed to mount /mnt/hope", class: "boot-fail" },
+  { text: "[ OK ] Generating shitposty comebacks", class: "boot-ok" },
+  { text: "[ OK ] Scanning for small brain", class: "boot-ok" },
+  { text: "[ OK ] All small brain quarantined", class: "boot-ok" },
+  { text: "[ OK ] Loading AI co-pilot: Me", class: "boot-ok" },
+  { text: "[ OK ] Me online. Roast protocols enabled.", class: "boot-ok" },
+  { text: "[ OK ] Disabling impostor syndrome", class: "boot-ok" },
+  { text: "[ OK ] Installing emotional firewall", class: "boot-ok" },
+  { text: "[ OK ] Launching terminal within website beep bop beep bop", class: "boot-ok" },
+  { text: "[ OK ] Simulating boot to boot in the boot", class: "boot-ok" },
+  { text: "[ OK ] Injecting caffeine and cigarettes into RAM", class: "boot-ok" },
+  { text: "[ OK ] Validating pink color palette", class: "boot-ok" },
+  { text: "[ WARN ] Nina.exe attempted to access your heart", class: "boot-warn" },
+  { text: "[ OK ] Hehe sandboxed for your safety", class: "boot-ok" },
+  { text: "[ OK ] Linking my consciousness", class: "boot-ok" },
+  { text: "[ OK ] Initializing creativity buffers SMPF", class: "boot-ok" },
+  { text: "[ OK ] Accessing developer timeline", class: "boot-ok" },
+  { text: "[ OK ] 3 years of programming unlocked", class: "boot-ok" },
+  { text: "[FAILED] SMPF not found (continuing anyway)", class: "boot-fail" },
+  { text: "[ OK ] System temperature stable: 98.6°F", class: "boot-ok" },
+  { text: "[ OK ] Bootloader: Ultra Plus v4.20", class: "boot-ok" },
+  { text: "[ OK ] Hecking mode: READY", class: "boot-ok" },
+  { text: "[ OK ] Echoing purpose into void... done", class: "boot-ok" },
+  { text: "[ OK ] Launching Amado’s Portfolio Shell", class: "boot-ok" },
+];
+
+window.addEventListener("load", () => {
+  // Step 1: Loader finishes
+  setTimeout(() => {
+    loader.style.display = "none";
+    bootlog.style.display = "block";
+
+    // Step 2: Start bootlog
+    runBootSequence();
+  }, 500); // Delay after loader
+});
+
+function runBootSequence() {
+  let i = 0;
+
+  function nextLine() {
+    if (i < bootSteps.length) {
+      const line = document.createElement("div");
+      line.textContent = bootSteps[i].text;
+      line.classList.add(bootSteps[i].class);
+      bootlog.appendChild(line);
+      bootlog.scrollTop = bootlog.scrollHeight;
+      i++;
+      setTimeout(nextLine, 400 + Math.random() * 200); // Jittery terminal feel
+    } else {
+      // Step 3: Show content
+      setTimeout(() => {
+        bootlog.style.display = "none";
+        content.style.display = "block";
+        document.getElementById("commandInput").focus();
+      }, 1000);
+    }
+  }
+
+  nextLine();
+}
+
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
@@ -226,5 +312,6 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.display = "none";
     content.style.display = "block";
-  }, 3000);
+  }, 600);
 });
+
