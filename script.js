@@ -331,7 +331,8 @@ function runBootSequence() {
       bootlog.appendChild(line);
       bootlog.scrollTop = bootlog.scrollHeight;
       i++;
-      setTimeout(nextLine, 10 + Math.random() * 20); // Random delay for realism 
+      setTimeout(nextLine, 1); // Delay between lines
+      // setTimeout(nextLine, 10 + Math.random() * 20); // Random delay for realism 
     } else {
       
       setTimeout(() => {
