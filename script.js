@@ -39,6 +39,8 @@ function handleCommand(command) {
       </div>
     `;
   }
+
+  // TO DO: Add more projects and make it look better
   else if (command === 'sample-projects')
   {
     response = `
@@ -133,6 +135,9 @@ function handleCommand(command) {
         <li>link-to-itch</li>
         <li>contact-info</li>
         <li>sample_projects</li>
+        <li>profile-picture</li>
+        <li>devfetch</li>
+        <li>full-description</li>
         <li>clear</li>
         
       </ul>
@@ -243,10 +248,13 @@ Github      : github.com/artemiovibora
     `;
   }
 
+  // TO DO: Add a full description of me and my portfolio
   else if (command === 'full-description')
   {
     response = `
       <h1>Hello World</h1>
+      <p>Welcome to my terminal portfolio!</p>
+      <p>I am a passionate developer with experience in multiple programming languages and technologies.</p>
     `;
   } 
   else {
