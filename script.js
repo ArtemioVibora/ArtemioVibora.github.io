@@ -22,6 +22,8 @@ commandInput.addEventListener('keydown', function(event) {
   }
 });
 
+// Handles commands and generates responses
+
 function handleCommand(command) {
   let response = '';
 
@@ -316,6 +318,8 @@ window.addEventListener("load", () => {
   }, 500); // Delay after loader
 });
 
+// Simulates the boot sequence by displaying each step with a delay, then shows the terminal interface
+
 function runBootSequence() {
   let i = 0;
 
@@ -327,7 +331,7 @@ function runBootSequence() {
       bootlog.appendChild(line);
       bootlog.scrollTop = bootlog.scrollHeight;
       i++;
-      setTimeout(nextLine, 400 + Math.random() * 200); 
+      setTimeout(nextLine, 100 + Math.random() * 200); 
     } else {
       
       setTimeout(() => {
