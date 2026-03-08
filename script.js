@@ -1,3 +1,5 @@
+// TODO: refractor the code to be more modular and organized, maybe use classes and separate files for commands and boot steps, also add more commands and make the responses more detailed and visually appealing, also add some animations or effects to the terminal output to make it more engaging, and maybe add a feature to allow users to customize the terminal appearance or theme.
+
 // script.js
 const commandInput = document.getElementById('commandInput');
 const outputDiv = document.getElementById('output');
