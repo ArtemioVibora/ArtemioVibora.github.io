@@ -16,13 +16,15 @@ function escapeHtml(str)
     .replace(/\//g, "&#x2F;");
 }
 
-commandInput.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    const input = commandInput.value.trim().toLowerCase();
-    handleCommand(input);
-    commandInput.value = '';
-  }
-});
+if (commandInput) {
+  commandInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      const input = commandInput.value.trim().toLowerCase();
+      handleCommand(input);
+      commandInput.value = '';
+    }
+  });
+}
 
 // Handles commands and generates responses
 
@@ -181,22 +183,22 @@ function handleCommand(command) {
   else if (command === 'achievements')
   {
     response = `
-      <p>==========================</p>
+      <p>=========================================================================</p>
       <ul>
         
-        <li>Winner of the Game Jam Plus Best Non Unity Game 2023</li>
-        <li>Dean's lister first term 2024-25 first honor</li>
-        <li>Dean's lister second term 2024-25 second honor</li>
-        <li>Winner of Capture the flag contest SOC week 2025 iacademy</li>
-        <li>Winner of ICT Quiz Bee "Brain Busters" SOC week 2025 iacademy</li>
-        <li>Participated in PENLAB game jam 2023</li>
-        <li>Most outstanding engagement project award 2019 certified UP NSTP</li>
-        <li>Web design certified by Freecode camp</li>
-        <li>Certificate of appreciation Vote Report 2025</li>
-        <li>Web Security SOC Week 2025 certificate</li>
-        <li>Blockchain SOC Week 2025 certificate</li>
+        <li> + Winner of the Game Jam Plus Best Non Unity Game 2023</li>
+        <li> + Dean's lister first term 2024-25 first honor</li>
+        <li> + Dean's lister second term 2024-25 second honor</li>
+        <li> + Winner of Capture the flag contest SOC week 2025 iacademy</li>
+        <li> + Winner of ICT Quiz Bee "Brain Busters" SOC week 2025 iacademy</li>
+        <li> + Participated in PENLAB game jam 2023</li>
+        <li> + Most outstanding engagement project award 2019 certified UP NSTP</li>
+        <li> + Web design certified by Freecode camp</li>
+        <li> + Certificate of appreciation Vote Report 2025</li>
+        <li> + Web Security SOC Week 2025 certificate</li>
+        <li> + Blockchain SOC Week 2025 certificate</li>
       </ul>
-      <p>==========================</p>
+      <p>========================================================================</p>
     
     `;
   }
@@ -259,13 +261,50 @@ Github      : github.com/artemiovibora
       <p>I am a passionate developer with experience in multiple programming languages and technologies.</p>
     `;
   } 
+  else if (command === 'transform')
+  {
+      // Optional: show a loader in current page before navigating
+    const loader = document.createElement('div');
+    loader.id = 'loader';
+    loader.innerHTML = `<div class="rotating-dot"></div>`;
+    document.body.appendChild(loader);
+
+    const dotStyle = document.createElement('style');
+    dotStyle.innerHTML = `
+      .rotating-dot {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: red;
+        animation: spin 1s linear infinite, colorShift 1.5s linear infinite;
+      }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes colorShift {
+        0% { background-color: red; } 25% { background-color: blue; } 
+        50% { background-color: green; } 75% { background-color: yellow; } 
+        100% { background-color: red; }
+      }
+      #loader {
+        position: fixed; top:0; left:0; width:100%; height:100%;
+        display:flex; justify-content:center; align-items:center;
+        background: rgba(10,10,10,0.95); z-index:9999;
+      }
+    `;
+    document.head.appendChild(dotStyle);
+
+    setTimeout(() => {
+      window.location.href = "transform.html";
+    }, 1000); // short delay for effect
+  }
   else {
     response = `<p>Command not found. Type 'help' for available commands.</p>`;
   }
 
   const safeCommand = escapeHtml(command);
-  outputDiv.innerHTML += `<div>&gt; ${safeCommand}</div>${response}`;
-  outputDiv.scrollTop = outputDiv.scrollHeight;
+  if (outputDiv) {
+    outputDiv.innerHTML += `<div>&gt; ${safeCommand}</div>${response}`;
+    outputDiv.scrollTop = outputDiv.scrollHeight;
+  }
 }
 
 //Bootloader
@@ -319,19 +358,22 @@ const bootSteps = [
 
 window.addEventListener("load", () => {
   
-  setTimeout(() => {
-    loader.style.display = "none";
-    bootlog.style.display = "block";
+  if (loader && bootlog) {
+    setTimeout(() => {
+      loader.style.display = "none";
+      bootlog.style.display = "block";
 
-    
-    runBootSequence();
-  }, 500); // Delay after loader
+      runBootSequence();
+    }, 500); // Delay after loader
+  }
 });
 
 // Simulates the boot sequence by displaying each step with a delay, then shows the terminal interface
 
 function runBootSequence() {
   let i = 0;
+
+  if (!bootlog) return;
 
   function nextLine() {
     if (i < bootSteps.length) {
@@ -348,8 +390,12 @@ function runBootSequence() {
       setTimeout(() => {
         bootlog.style.display = "none";
         content.style.display = "block";
-        document.getElementById("terminal-container").style.display = "flex";
-        document.getElementById("commandInput").focus();
+        const terminalContainer = document.getElementById("terminal-container");
+        if (terminalContainer) terminalContainer.style.display = "flex";
+        
+        const inputField = document.getElementById("commandInput");
+        if (inputField) inputField.focus();
+
       }, 1000);
     }
   }
@@ -361,12 +407,13 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
 
-  loader.style.opacity = 0;
-  
+  if (loader) {
+    loader.style.opacity = 0;
+  }
 
   setTimeout(() => {
-    loader.style.display = "none";
-    content.style.display = "block";
+    if (loader) loader.style.display = "none";
+    // On the professional page (transform.html), we show content immediately since there is no boot sequence
+    if (content && !document.getElementById("bootlog")) content.style.display = "block";
   }, 600);
 });
-
