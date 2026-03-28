@@ -296,6 +296,7 @@ Github      : github.com/artemiovibora
       window.location.href = "transform.html";
     }, 1000); // short delay for effect
   }
+  // Shit
   else {
     response = `<p>Command not found. Type 'help' for available commands.</p>`;
   }
